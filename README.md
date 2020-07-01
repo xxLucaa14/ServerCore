@@ -1,15 +1,15 @@
-# ServerCore
-It is a Pocketmine plugin with many cool things for example /day make day in the world where you are
+# Info
+- Ein Deutsches ServerCore Plugin mit vielen Commands!
 
 # Commands
-- /day
-- /night
-- /heal
-- /feed
-- /gm 0
-- /gm 1
-- /gm 2
-- /gm 3
+- /day -    Mache Tag
+- /night -  Mache Nacht
+- /heal -   Heile deine Herzen
+- /feed -   Heile deinen Hunger
+- /gm 0 -   Setze deinen Gamemode auf überleben
+- /gm 1 - Setze deinen Gamemode auf kreativ
+- /gm 2 - Setze deinen Gamemode auf abenteuer
+- /gm 3 - Setze deinen Gamemode auf zuschauer
 
 # Permissions
 - /day      =    day.command.sc
