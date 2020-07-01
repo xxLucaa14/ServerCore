@@ -20,3 +20,12 @@ It is a Pocketmine plugin with many cool things for example /day make day in the
 - /gm 1     =    gm.command.sc
 - /gm 2     =    gm.command.sc
 - /gm 3     =    gm.command.sc
+
+# In Planung
+- /flyon
+- /flyoff
+- /speed
+- /break
+- /tpall
+- /kickall
+- /nightvision
