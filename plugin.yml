@@ -1,0 +1,30 @@
+api: 3.0.0
+main: xxLucaa14\Main
+name: ServerCore
+version: 1.2.0
+author: xxLuaa14
+commands:
+  day:
+    description: Mache Tag | §6ServerCore
+    usage: /day
+  night:
+    description: Machr Nacht | §6ServerCore
+    usage: /night
+  feed:
+    description: Heile deinen Hunger | §6ServerCore
+    usage: /feed
+  heal:
+    description: Heile deine Herzen | §6ServerCore
+    usage: /heal
+  gm 0:
+    description: Ändere deinen Gamemode zu Überleben | §6ServerCore
+    usage: /gm 0
+  gm 1:
+    description: Ändere deinen Gamemode zu Kreativ | §6ServerCore
+    usage: /gm 1
+  gm 2:
+    description: Ändere deinen Gamemode zu Abenteuer | §6ServerCore
+    usage: /gm 2
+  gm 3:
+    description: Ändere deinen Gamemode zu Zuschauer | §6ServerCore
+    usage: /gm 3
