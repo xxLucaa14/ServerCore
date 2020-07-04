@@ -10,6 +10,10 @@
 - /gm 1 - Setze deinen Gamemode auf kreativ
 - /gm 2 - Setze deinen Gamemode auf abenteuer
 - /gm 3 - Setze deinen Gamemode auf zuschauer
+- /fly on - Aktiviere Fly
+- /fly off - Deaktiviere Fly
+- /tpall - TP alle Spieler zu dir
+- /kickall - Kicka alle Spieler vom Server
 
 # Permissions
 - /day      =    day.command.sc
@@ -20,14 +24,14 @@
 - /gm 1     =    gm.command.sc
 - /gm 2     =    gm.command.sc
 - /gm 3     =    gm.command.sc
+- /fly on   =    fly.command.sc
+- /fly off  = 	 fly.command.sc
+- /tpall    =    tpall.command.sc
+- /kickall  =    kickall.command.sc
 
 # In Planung
-- /fly on
-- /fly off
 - /speed
 - /break
-- /tpall
-- /kickall
 - /nightvision
 - /info
 - /commands
