@@ -22,8 +22,8 @@
 - /gm 3     =    gm.command.sc
 
 # In Planung
-- /flyon
-- /flyoff
+- /fly on
+- /fly off
 - /speed
 - /break
 - /tpall
