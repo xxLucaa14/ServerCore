@@ -125,6 +125,64 @@ class Main extends PluginBase{
                 }
                 break;
         }
+
+        switch ($command->getName()) {
+            case "fly on":
+                if ($player instanceof Player){
+                    if ($player->hasPermission("fly.command.sc")){
+                        $player->sendMessage("§l§6ServerCore §8| §r§fDu hast Fly aktiviert");
+                        $player->setAllowFlight(true);
+                        $player->setFlying(true);
+                    } else {
+                        $player->sendMessage("§l§6SeverCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
+                    }
+                }
+                break;
+        }
+
+        switch ($command->getName()) {
+            case "fly off":
+                if ($player instanceof Player){
+                    if ($player->hasPermission("fly.command.sc")){
+                        $player->sendMessage("§l§6ServerCore §8| §r§fDu hast Fly deaktiviert");
+                        $player->setAllowFlight(false);
+                        $player->setFlying(false);
+                    } else {
+                        $player->sendMessage("§l§6SeverCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
+                    }
+                }
+                break;
+        }
+
+        switch ($command->getName()) {
+            case "tpall":
+                if ($player instanceof Player){
+                    if ($player->hasPermission("tpall.command.sc")){
+                        $player->sendMessage("§l§6ServerCore §8| §r§fAlle Spieler wurden erfolgreich zu dir Teleportiert");
+                        foreach ($this->getServer()->getOnlinePlayers() as $online) {
+                            $online->teleport($player);
+                            $online->sendMessage("Du wurdest durch ein TPALl zu {$player} teleportiert");
+                        }
+                    } else {
+                        $player->sendMessage("§l§6SeverCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
+                    }
+                }
+                break;
+        }
+
+        switch ($command->getName()) {
+            case "kickall":
+                if ($player instanceof Player){
+                    if ($player->hasPermission("kickall.command.sc")){
+                        foreach ($this->getServer()->getOnlinePlayers() as $online) {
+                                 $online->kick("Du wurdest durch ein KickAll vom Server gekickt");
+                        }
+                    } else {
+                        $player->sendMessage("§l§6SeverCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
+                    }
+                }
+                break;
+        }
         return true;
     }
 }
