@@ -1,7 +1,7 @@
 api: 3.0.0
 main: xxLucaa14\Main
 name: ServerCore
-version: 1.2.0
+version: 1.4.0
 author: xxLuaa14
 commands:
   day:
@@ -18,13 +18,25 @@ commands:
     usage: /heal
   gm 0:
     description: Ändere deinen Gamemode zu Überleben | §6ServerCore
-    usage: /gm 0
+    usage: /gm <0/1/2/3>
   gm 1:
     description: Ändere deinen Gamemode zu Kreativ | §6ServerCore
-    usage: /gm 1
+    usage: /gm <0/1/2/3>
   gm 2:
     description: Ändere deinen Gamemode zu Abenteuer | §6ServerCore
-    usage: /gm 2
+    usage: /gm <0/1/2/3>
   gm 3:
     description: Ändere deinen Gamemode zu Zuschauer | §6ServerCore
-    usage: /gm 3
+    usage: /gm <0/1/2/3>
+  fly on:
+    description: Aktiviere Fly | §6ServerCore
+    usage: /fly <on/off>
+  fly off:
+    description: Deaktiviere Fly | §6ServerCore
+    usage: /fly <on/off>
+  tpall:
+    description: TP alle Spieler zu dir | §6ServerCore
+    usage: /tpall
+  kickall:
+    description: Kicke alle Spieler vom Server | §6ServerCore
+    usage: /kickall
