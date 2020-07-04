@@ -29,4 +29,5 @@
 - /tpall
 - /kickall
 - /nightvision
-- /repair
+- /info
+- /commands
