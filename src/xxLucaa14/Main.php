@@ -5,11 +5,15 @@ namespace xxLucaa14;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\plugin\PluginBase;
+use pocketmine\event\Listener;
 use pocketmine\Player;
 use pocketmine\Level\LevelTimings;
 use pocketmine\Level;
 
-class Main extends PluginBase{
+class Main extends PluginBase implements Listener {
+    
+    public $fly = false;
+    
     public function onEnable()
     {
         $this->getLogger()->info("Plugin wurde erfolgreich aktiviert..");
@@ -34,8 +38,6 @@ class Main extends PluginBase{
                 }
                 break;
         }
-
-        switch ($command->getName()) {
             case "night":
                 if ($player instanceof Player){
                     if ($player->hasPermission("night.command.sc")){
@@ -45,10 +47,7 @@ class Main extends PluginBase{
                         $player->sendMessage("§l§6ServerCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
                     }
                 }
-                break;
-        }
-
-        switch ($command->getName()) {
+            break;
             case "feed":
                 if ($player instanceof Player){
                     if ($player->hasPermission("feed.command.sc")){
@@ -58,10 +57,7 @@ class Main extends PluginBase{
                         $player->sendMessage("§l§6ServerCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
                     }
                 }
-                break;
-        }
-
-        switch ($command->getName()) {
+            break;
             case "heal":
                 if ($player instanceof Player){
                     if ($player->hasPermission("heal.command.sc")){
@@ -71,10 +67,7 @@ class Main extends PluginBase{
                         $player->sendMessage("§l§6ServerCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
                     }
                 }
-                break;
-        }
-
-        switch ($command->getName()) {
+            break;
             case "gm 0":
                 if ($player instanceof Player){
                     if ($player->hasPermission("gm.command.sc")){
@@ -84,10 +77,7 @@ class Main extends PluginBase{
                         $player->sendMessage("§l§6ServerCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
                     }
                 }
-                break;
-        }
-
-        switch ($command->getName()) {
+            break;
             case "gm 1":
                 if ($player instanceof Player){
                     if ($player->hasPermission("gm.command.sc")){
@@ -97,10 +87,7 @@ class Main extends PluginBase{
                         $player->sendMessage("§l§6ServerCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
                     }
                 }
-                break;
-        }
-
-        switch ($command->getName()) {
+            break;
             case "gm 2":
                 if ($player instanceof Player){
                     if ($player->hasPermission("gm.command.sc")){
@@ -110,10 +97,7 @@ class Main extends PluginBase{
                         $player->sendMessage("§l§6ServerCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
                     }
                 }
-                break;
-        }
-
-        switch ($command->getName()) {
+            break;
             case "gm 3":
                 if ($player instanceof Player){
                     if ($player->hasPermission("gm.command.sc")){
@@ -123,38 +107,24 @@ class Main extends PluginBase{
                         $player->sendMessage("§l§6ServerCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
                     }
                 }
-                break;
-        }
-
-        switch ($command->getName()) {
-            case "fly on":
+            break;
+            case "fly":
                 if ($player instanceof Player){
                     if ($player->hasPermission("fly.command.sc")){
-                        $player->sendMessage("§l§6ServerCore §8| §r§fDu hast Fly aktiviert");
-                        $player->setAllowFlight(true);
-                        $player->setFlying(true);
+                        if ($this->fly === false){
+                            $player->sendMessage("§l§6ServerCore §8| §r§fFlugmodus aktiviert!");
+                            $player->setAllowFlight(true);
+                            $player->setFlying(true);
+                        } elseif ($this->fly === true) {
+                            $player->sendMessage("§l§6ServerCore §8| §r§fFlugmodus deaktiviert!");
+                            $player->setAllowFlight(false);
+                            $player->setFlying(false);
+                        }
                     } else {
                         $player->sendMessage("§l§6SeverCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
                     }
                 }
-                break;
-        }
-
-        switch ($command->getName()) {
-            case "fly off":
-                if ($player instanceof Player){
-                    if ($player->hasPermission("fly.command.sc")){
-                        $player->sendMessage("§l§6ServerCore §8| §r§fDu hast Fly deaktiviert");
-                        $player->setAllowFlight(false);
-                        $player->setFlying(false);
-                    } else {
-                        $player->sendMessage("§l§6SeverCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
-                    }
-                }
-                break;
-        }
-
-        switch ($command->getName()) {
+            break;
             case "tpall":
                 if ($player instanceof Player){
                     if ($player->hasPermission("tpall.command.sc")){
@@ -167,10 +137,7 @@ class Main extends PluginBase{
                         $player->sendMessage("§l§6SeverCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
                     }
                 }
-                break;
-        }
-
-        switch ($command->getName()) {
+            break;
             case "kickall":
                 if ($player instanceof Player){
                     if ($player->hasPermission("kickall.command.sc")){
@@ -181,7 +148,7 @@ class Main extends PluginBase{
                         $player->sendMessage("§l§6SeverCore §8| §r§fDu hast keine Rechte diesen Command auszuführen!");
                     }
                 }
-                break;
+            break;
         }
         return true;
     }
